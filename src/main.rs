@@ -21,11 +21,10 @@ fn closure_or_function(){
 }
 
 #[allow(unused)]
-fn return_closure()//-> dyn Fn(i32) -> i32
-{
-    |x| x+1;
+fn return_closure()-> Box<dyn Fn(i32) -> i32> {
+    Box::new(|x| x+1)
 }
 
 fn main() {
-    return_closure()
+    let test = return_closure();
 }
