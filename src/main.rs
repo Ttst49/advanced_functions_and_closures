@@ -28,7 +28,14 @@ fn return_closure()-> Box<dyn Fn(i32) -> i32> {
     Box::new(|x| x+1)
 }
 
+struct Pancakes;
+
+impl HelloMacro for Pancakes {
+    fn hello_macro() {
+        println!("Hey macro, my name is pancakes")
+    }
+}
 
 fn main() {
-    let test = return_closure();
+    Pancakes::hello_macro();
 }
