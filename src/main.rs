@@ -1,7 +1,10 @@
+use hello_macro::HelloMacro;
+
 #[allow(unused)]
 fn add_one(x:i64)->i64{
     x+1
 }
+
 
 #[allow(unused)]
 fn make_it_twice(f:fn(i64)->i64,arg:i64)->i64{
@@ -24,6 +27,7 @@ fn closure_or_function(){
 fn return_closure()-> Box<dyn Fn(i32) -> i32> {
     Box::new(|x| x+1)
 }
+
 
 fn main() {
     let test = return_closure();

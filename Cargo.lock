@@ -5,3 +5,12 @@ version = 3
 [[package]]
 name = "advanced_functions_and_closures"
 version = "0.1.0"
+dependencies = [
+ "hello_macro",
+]
+
+[[package]]
+name = "hello_macro"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd2e2aefe8a8c047834713d11f8b3a483e99412daa635e8581b7a60223ae5cf2"
